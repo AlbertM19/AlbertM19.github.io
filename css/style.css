@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.try {
+    border: 1px solid red;
+}
+header {
+     background-color:rgb(32, 41, 58);
+}
+.banner-name {
+    /* width: 40%; */
+    display: inline-block;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    color: white;
+    font-family: cursive;
+    /* text-align: center; */
+    padding: 0.5em;
+}
+.banner-name > h1 {
+    font-weight: 900;
+}
+.banner-name > h3 {
+    font-weight: 700;
+}
+nav {
+    color: white;
+    float: right;
+    /* margin-top: 1em; */
+}
+.search-bar {
+    border-radius: 5px;
+}
+input[type=search]:focus {
+    border: 3px solid #555;
+  }
+ul li {
+    padding: 20px;
+}
+
+main {
+    background-color: rgba(218, 218, 218, 0.307);
+}
+
+[class*="card-body"] {
+    text-align: center;
+}
+[class*="shadow"] {
+    border-radius: 20px;
+}
