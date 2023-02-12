@@ -9,13 +9,10 @@ header {
      background-color:rgb(32, 41, 58);
 }
 .banner-name {
-    /* width: 40%; */
     display: inline-block;
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    color: white;
     font-family: cursive;
-    /* text-align: center; */
     padding: 0.5em;
+    text-align: center;
 }
 .banner-name > h1 {
     font-weight: 900;
@@ -47,4 +44,16 @@ main {
 }
 [class*="shadow"] {
     border-radius: 20px;
+}
+@media (max-width: 1200) {
+
+}
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768) {
+
+}
+@media (max-width: 576) {
+    
 }
