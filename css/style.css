@@ -1,59 +1,151 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 .try {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 header {
-     background-color:rgb(32, 41, 58);
+  background-color: rgb(32, 41, 58);
 }
 .banner-name {
-    display: inline-block;
-    font-family: cursive;
-    padding: 0.5em;
-    text-align: center;
-}
-.banner-name > h1 {
-    font-weight: 900;
-}
-.banner-name > h3 {
-    font-weight: 700;
+  font-family: cursive;
+  padding: 0.5em;
+  text-align: center;
 }
 nav {
-    color: white;
-    float: right;
-    /* margin-top: 1em; */
+  float: right;
+  font-size: 20px;
+  font-weight: 600;
+}
+.banner-name h1 {
+  font-weight: 900;
+}
+.banner-name h3 {
+  font-weight: 800;
 }
 .search-bar {
-    border-radius: 5px;
+  border-radius: 5px;
 }
-input[type=search]:focus {
-    border: 3px solid #555;
-  }
+input[type="search"]:focus {
+  border: 3px solid #555;
+}
 ul li {
-    padding: 20px;
+  padding: 10px;
+  color: white;
 }
 
-main {
-    background-color: rgba(218, 218, 218, 0.307);
+main, [class*="offcanvas-body"] {
+  background-color: rgba(218, 218, 218, 0.307);
 }
 
 [class*="card-body"] {
-    text-align: center;
+  text-align: center;
 }
 [class*="shadow"] {
-    border-radius: 20px;
+  border-radius: 20px;
 }
-@media (max-width: 1200) {
-
+@media (max-width: 1200px) {
+    .banner-name h1 {
+        font-weight: 800;
+        color: green;
+    }
+    .banner-name h4 {
+        font-weight: 700;
+        color: green;
+    }
+    .cart {
+        font-size: 20px;
+    }
+    .acct {
+        font-size: 20px;
+    }
 }
 @media (max-width: 992px) {
-
+    .banner-name h1 {
+        font-weight: 600;
+        color: red;
+    }
+  .banner-name h4 {
+    font-weight: 500;
+    color: red;
+  }
+  .cart {
+    font-size: 14px;
+  }
+  .acct {
+    font-size: 14px;
+  }
 }
-@media (max-width: 768) {
+@media (max-width: 768px) {
+  .banner-name h1 {
+        font-weight: 500;
+        color: blue;
+    }
+    .banner-name h4 {
+        font-weight: 400;
+        font-size: 18px;
+        color: blue;
+      }
+      .cart {
+        display: none;
+      }
+      .acct {
+        display: none;
+      }
+      nav {
+        float: right;
+      }
+  }
+  @media (max-width: 576px) {
+    .banner-name h1 {
+        font-weight: 400;
+        color: yellow;
+    }
+    .banner-name h4 {
+        font-weight: 300;
+        color: yellow;
+      }
+      [class*="search-bar"] {
+        font-size: 5px;
+      }
+      .cart {
+        padding: 1px, 10px;
+      }
+      nav {
+        float: none;
 
-}
-@media (max-width: 576) {
+      }
+      .nav-center {
+        display: flex;
+        justify-content: center;
+
+      }
+      .banner-name {
+        text-align: center;
+      }
+  }
+
+  #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 2;
+    cursor: pointer;
+  }
+  #text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
     
-}

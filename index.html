@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Albert's Biscuits</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -11,213 +11,484 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <main class="">
-      <header class="px-4 ">
-      <div class="row">
-<!-- banner -->
-      <div class="col-5 try">
-        <div class="banner-name">
-          <a style="text-decoration: none; color: white;" href="#">
-            <h1>Albert's Biscuits</h1>
-            <h4>Home of Cookies and Delicacies</h4>
-          </a>
-        </div>
-      </div>
-<!-- banner -->
-
-<!-- navbar -->
-      <div class="col-7 try">
-        <nav class="navbar-expand-lg try">
-          <div class="container-fluid">
-            <ul class="navbar-nav h5 ">
-              <li class="nav-item mt-2">
-                <small>
-                  <div class="search-bar input-group">
-                    <input type="search" class="form-control" placeholder="Search products">
-                    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
-                  </div>
-                </small>
-              </li>
-              <li class="nav-item mt-2 ">
-                <a class="nav-link" href="">
-                  <small>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="">Cart</span>
-                  </small>
-                </a>
-              </li>
-              <li class="nav-item mt-2 ">
-                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#account">
-                  <small>
-                    <i class="fa-solid fa-user"></i>
-                    <span class="">Account</span>
-                  </small>
-                </a>
-              </li>
-            </ul>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="try">
+        <div class="row">
+          <!-- banner -->
+          <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5 col-xxl-5">
+            <a style="text-decoration: none; color: white" href="index.html">
+              <div class="banner-name try">
+                <h1>Albert's Biscuits</h1>
+                <h4>Home of Cookies and Delicacies</h4>
+              </div>
+            </a>
           </div>
-        </nav>
-      </div>
-<!-- navbar -->
-      </div>
+          <!-- banner -->
+
+          <!-- navbar -->
+          <div class="col-sm-12 col-md-6 col-lg-7 col-xl-7 col-xxl-7">
+            <div class="py-3 nav-center">
+              <nav class="navbar-expand try">
+                <div class="container-fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <div class="search-bar input-group">
+                        <input type="search" class="form-control" />
+                        <span class="input-group-text">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#my-cart" data-bs-toggle="offcanvas">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart">Cart</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#account">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="acct">Account</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <!-- navbar -->
+        </div>
       </header>
 
-<!-- section1       -->
-      <section class="product-list p-4">         
-          <div class="row">
-            <h2>Most Popular</h2>
-            <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-4">
-              <div class="card">
-                <img class="card-img-top" src="./assets/img/ferrero.png" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Ferrero</h5>
-                  <p class="card-text"></p>
-                  <small><button type="button" class="btn btn-outline-danger">Add to Cart</button></small>
-                </div>
-              </div>
+      <!-- my cart -->
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="my-cart"
+        aria-labelledby="offcanvasLabel"
+      >
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title">My Cart</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body d-flex justify-content-center">
+          <div class="align-self-center">
+            <img src="./assets/img/cart-icon.jpg" alt="cart icon" />
+            <p class="mt-4">You have no items in your cart</p>
+          </div>
+        </div>
+      </div>
+      <!-- my cart -->
+
+      <!-- account -->
+      <div class="modal fade" id="#account">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Modal Heading</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-4">
-              <div class="card">
-                <img class="card-img-top" src="./assets/img/pepero-almond.jpg"  alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Pepero</h5>
-                  <p class="card-text"></p>
-                  <small><button type="button" class="btn btn-outline-danger">Add to Cart</button></small>
-                </div>
-              </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+              Modal body..
             </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-4">
-              <div class="card">
-                <img class="card-img-top" src="./assets/img/maltesers.jpg" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Cadburry</h5>
-                  <p class="card-text" cl></p>
-                  <small><button type="button" class="btn btn-outline-danger">Add to Cart</button></small>
-                </div>
-              </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
             </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-3 d-md-block col-md-3 d-sm-none d-none">
-              <div class="card">
-                <img class="card-img-top" src="./assets/img/piknik.jpg" alt="">
+      
+          </div>
+        </div>
+      </div>
+      
+      <!-- account -->
+
+      <!-- productlist       -->
+      <section class="product-list p-4">
+        <div class="row">
+          <h2>Most Popular</h2>
+          <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-4">
+            <div class="card">
+              <a href="ferrero.html" class="text-decoration-none text-dark">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/ferrero.png"
+                  alt=""
+                />
                 <div class="card-body">
-                  <h5 class="card-title">Pik-nik</h5>
-                  <p class="card-text"></p>
-                  <small><button type="button" class="btn btn-outline-danger">Add to Cart</button></small>
+                  <h3 class="card-title d-none d-lg-block">Ferrero</h3>
+                  <h4 class="card-title d-none d-md-block d-lg-none">
+                    Ferrero
+                  </h4>
+                  <h5 class="card-title d-none d-sm-block d-md-none">
+                    Ferrero
+                  </h5>
+                  <h6 class="card-title d-block d-sm-none">Ferrero</h6>
+                  <button type="button" class="btn btn-outline-danger">
+                    <span class="d-none d-lg-block" style="font-size: 14px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-md-block d-lg-none"
+                      style="font-size: 12px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-sm-block d-md-none"
+                      style="font-size: 10px"
+                      >Add to Cart</span
+                    >
+                    <span class="d-block d-sm-none" style="font-size: 8px"
+                      >Add to Cart</span
+                    >
+                  </button>
                 </div>
-              </div>
-            </div>
-            <div class="d-none d-xxl-block col-xxl-2 d-xl-block col-xl-2 d-lg-none">
-              <div class="card">
-                <img class="card-img-top" src="./assets/img/pocky-chocobanana.jpg" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Pocky</h5>
-                  <p class="card-text"></p>
-                  <button type="button" class="btn btn-outline-danger">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-            <div class="d-none d-xxl-block col-xxl-2 d-xl-block col-xl-2 d-lg-none">
-              <div class="card">
-                <img class="card-img-top" src="./assets/img/brownie-bitesjpg.jpg" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Brownie Bites</h5>
-                  <p class="card-text"></p>
-                  <small><button type="button" class="btn btn-outline-danger">Add to Cart</button></small>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
+          <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-4">
+            <div class="card">
+              <a href="/pepero.html" class="text-decoration-none text-dark">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/pepero-chococookie.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3 class="card-title d-none d-lg-block">Pepero</h3>
+                  <h4 class="card-title d-none d-md-block d-lg-none">Pepero</h4>
+                  <h5 class="card-title d-none d-sm-block d-md-none">Pepero</h5>
+                  <h6 class="card-title d-block d-sm-none">Pepero</h6>
+                  <button type="button" class="btn btn-outline-danger">
+                    <span class="d-none d-lg-block" style="font-size: 14px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-md-block d-lg-none"
+                      style="font-size: 12px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-sm-block d-md-none"
+                      style="font-size: 10px"
+                      >Add to Cart</span
+                    >
+                    <span class="d-block d-sm-none" style="font-size: 8px"
+                      >Add to Cart</span
+                    >
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-4">
+            <div class="card">
+              <a href="#" class="text-decoration-none text-dark">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/maltesers.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3 class="card-title d-none d-lg-block">Maltesers</h3>
+                  <h4 class="card-title d-none d-md-block d-lg-none">
+                    Maltesers
+                  </h4>
+                  <h5 class="card-title d-none d-sm-block d-md-none">
+                    Maltesers
+                  </h5>
+                  <h6 class="card-title d-block d-sm-none">Maltesers</h6>
+                  <button type="button" class="btn btn-outline-danger">
+                    <span class="d-none d-lg-block" style="font-size: 14px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-md-block d-lg-none"
+                      style="font-size: 12px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-sm-block d-md-none"
+                      style="font-size: 10px"
+                      >Add to Cart</span
+                    >
+                    <span class="d-block d-sm-none" style="font-size: 8px"
+                      >Add to Cart</span
+                    >
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            class="col-xxl-2 col-xl-2 col-lg-3 d-md-block col-md-3 d-sm-none d-none"
+          >
+            <div class="card">
+              <a href="" class="text-decoration-none text-dark">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/piknik.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3 class="card-title d-none d-lg-block">Pik-nik</h3>
+                  <h4 class="card-title d-none d-md-block d-lg-none">
+                    Pik-nik
+                  </h4>
+                  <h5 class="card-title d-none d-sm-block d-md-none">
+                    Pik-nik
+                  </h5>
+                  <h6 class="card-title d-block d-sm-none">Pik-nik</h6>
+                  <button type="button" class="btn btn-outline-danger">
+                    <span class="d-none d-lg-block" style="font-size: 14px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-md-block d-lg-none"
+                      style="font-size: 12px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-sm-block d-md-none"
+                      style="font-size: 10px"
+                      >Add to Cart</span
+                    >
+                    <span class="d-block d-sm-none" style="font-size: 8px"
+                      >Add to Cart</span
+                    >
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            class="d-none d-xxl-block col-xxl-2 d-xl-block col-xl-2 d-lg-none"
+          >
+            <div class="card">
+              <a href="" class="text-decoration-none text-dark">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/pocky-chocobanana.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3 class="card-title d-none d-lg-block">Pocky</h3>
+                  <h4 class="card-title d-none d-md-block d-lg-none">Pocky</h4>
+                  <h5 class="card-title d-none d-sm-block d-md-none">Pocky</h5>
+                  <h6 class="card-title d-block d-sm-none">Pocky</h6>
+                  <button type="button" class="btn btn-outline-danger">
+                    <span class="d-none d-lg-block" style="font-size: 14px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-md-block d-lg-none"
+                      style="font-size: 12px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-sm-block d-md-none"
+                      style="font-size: 10px"
+                      >Add to Cart</span
+                    >
+                    <span class="d-block d-sm-none" style="font-size: 8px"
+                      >Add to Cart</span
+                    >
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            class="d-none d-xxl-block col-xxl-2 d-xl-block col-xl-2 d-lg-none"
+          >
+            <div class="card">
+              <a href="" class="text-decoration-none text-dark">
+                <img
+                  class="card-img-top"
+                  src="./assets/img/brownie-bitesjpg.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3
+                    class="card-title d-none d-lg-block"
+                    style="font-size: 22px; margin-top: 10px"
+                  >
+                    Brownie Bites
+                  </h3>
+                  <h4 class="card-title d-none d-md-block d-lg-none">
+                    Brownie Bites
+                  </h4>
+                  <h5 class="card-title d-none d-sm-block d-md-none">
+                    Brownie Bites
+                  </h5>
+                  <h6 class="card-title d-block d-sm-none">Brownie Bites</h6>
+                  <button type="button" class="btn btn-outline-danger">
+                    <span class="d-none d-lg-block" style="font-size: 14px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-md-block d-lg-none"
+                      style="font-size: 12px"
+                      >Add to Cart</span
+                    >
+                    <span
+                      class="d-none d-sm-block d-md-none"
+                      style="font-size: 10px"
+                      >Add to Cart</span
+                    >
+                    <span class="d-block d-sm-none" style="font-size: 8px"
+                      >Add to Cart</span
+                    >
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
         <!-- </div> -->
       </section>
 
-      <!-- section2 -->
+      <!-- location -->
       <section class="overflow-hidden py-2">
         <div class="row">
           <div class="col-lg-6 text-center pt-2 try">
-              <a class="" href="https://goo.gl/maps/G4xKbtEPxTcRip8Q8">
-                <img class="shadow m-auto d-none d-xxl-block" src="./assets/img/loc_map.png" alt="loc_map">
-                <img class="shadow m-auto d-none d-xl-block d-xxl-none" src="./assets/img/loc_map-xl.png" alt="">
-                <img class="shadow m-auto d-none d-lg-block d-xl-none" src="./assets/img/loc_map-lg.png" alt="">
-                <img class="shadow m-auto d-none d-md-block d-lg-none" src="./assets/img/loc_map-lg.png" alt="">
-                <img class="shadow m-auto d-md-none d-lg-none d-xl-none d-xxl-none" src="./assets/img/loc_map-lg.png" alt="">
-              </a>
+            <a class="" href="https://goo.gl/maps/G4xKbtEPxTcRip8Q8">
+              <img
+                class="shadow m-auto d-none d-xxl-block"
+                src="./assets/img/loc_map.png"
+                alt="loc_map"
+              />
+              <img
+                class="shadow m-auto d-none d-xl-block d-xxl-none"
+                src="./assets/img/loc_map-xl.png"
+                alt=""
+              />
+              <img
+                class="shadow m-auto d-none d-lg-block d-xl-none"
+                src="./assets/img/loc_map-lg.png"
+                alt=""
+              />
+              <img
+                class="shadow m-auto d-none d-md-block d-lg-none"
+                src="./assets/img/loc_map-xl.png"
+                alt=""
+              />
+              <img
+                class="shadow m-auto d-md-none d-lg-none d-xl-none d-xxl-none"
+                src="./assets/img/loc_map-sm.png"
+                alt=""
+              />
+            </a>
           </div>
           <div class="col-lg-6 d-flex justify-content-center pt-2 try">
-              <div class="align-self-center text-center">
-                <h1 class="d-none d-xl-block">Store Location</h1>
-                <h2 class="d-none d-lg-block d-xl-none">Store Location</h2>
-                <h3 class="d-md-block d-lg-none">Store Location</h3>
-                <h4 class="d-none d-xl-block mt-4">C. Raymundo Ave, Caniogan, Pasig City, 1606 Metro Manila</h4>
-                <h5 class="d-none d-lg-block d-xl-none mt-2">C. Raymundo Ave, Caniogan, Pasig City, 1606 Metro Manila</h5>
-                <h6 class="d-md-block d-lg-none mt-2">C. Raymundo Ave, Caniogan, Pasig City, 1606 Metro Manila</h6>
-              </div>
+            <div class="align-self-center text-center">
+              <h1 class="d-none d-xl-block">Store Location</h1>
+              <h2 class="d-none d-lg-block d-xl-none">Store Location</h2>
+              <h3 class="d-md-block d-lg-none">Store Location</h3>
+              <h4 class="d-none d-xl-block mt-4">
+                C. Raymundo Ave, Caniogan, Pasig City, 1606 Metro Manila
+              </h4>
+              <h5 class="d-none d-lg-block d-xl-none mt-2">
+                C. Raymundo Ave, Caniogan, Pasig City, 1606 Metro Manila
+              </h5>
+              <h6 class="d-md-block d-lg-none mt-2">
+                C. Raymundo Ave, Caniogan, Pasig City, 1606 Metro Manila
+              </h6>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- section3 -->
-    <section class="overflow-hidden bg-white p-4 pt-3">
-      <div class="row">
-        <div class="col-lg-6">
-          <h2>For Inquiries</h2>
-          <form action="">
-            <div class="input-group mt-2">
-              <span class="input-group-text">Name: </span>
-              <input type="text" class="form-control" placeholder="Full Name">
+      <!-- inquiries -->
+      <section class="overflow-hidden bg-white p-4 pt-3 mt-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>For Inquiries</h2>
+            <form action="">
+              <div class="input-group mt-2">
+                <span class="input-group-text">Name: </span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Full Name"
+                />
+              </div>
+              <div class="input-group mt-2">
+                <span class="input-group-text">Email: </span>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="e.g. Juandelacruz@gmail.com"
+                />
+              </div>
+              <div class="input-group mt-2">
+                <span class="input-group-text">Number:</span>
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="Mobile Number"
+                />
+              </div>
+              <div class="form-floating mt-2">
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  id="msg"
+                  name="msg"
+                ></textarea>
+                <label for="msg">Message</label>
+              </div>
+              <div class="text-center mt-2">
+                <button type="button" class="btn btn-primary btn-md">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div class="">
+              <h2>Payment Methods</h2>
+              <img src="./assets/img/visa.png" class="me-2" alt="" />
+              <img src="./assets/img/gcash.png" class="me-2" alt="" />
+              <img src="./assets/img/COD.png" alt="" />
             </div>
-            <div class="input-group mt-2">
-              <span class="input-group-text">Email: </span>
-              <input type="email" class="form-control" placeholder="e.g. Juandelacruz@gmail.com">
+            <div class="mt-4">
+              <h2>Delivery Services</h2>
+              <a style="text-decoration: none" href="">
+                <img src="./assets/img/grab.svg.png" class="me-2" alt="" />
+              </a>
+              <a style="text-decoration: none" href="">
+                <img src="./assets/img/foodpanda.png" alt="" />
+              </a>
             </div>
-            <div class="input-group mt-2">
-              <span class="input-group-text">Number:</span>
-              <input type="tel" class="form-control" placeholder="Mobile Number">
+            <div class="mt-4">
+              <h2>Follow Our Social Media</h2>
+              <a style="text-decoration: none" href="">
+                <img src="./assets/img/fb.png" class="me-2" alt="" />
+              </a>
+              <a style="text-decoration: none" href="">
+                <img src="./assets/img/insta.png" class="me-2" alt="" />
+              </a>
+              <a style="text-decoration: none" href="">
+                <img src="./assets/img/twt.png" alt="" />
+              </a>
             </div>
-            <div class="form-floating mt-2">
-              <textarea class="form-control" rows="3" id="msg" name="msg"></textarea>
-              <label for="msg">Message</label>
-            </div>
-           <div class="text-center mt-2">
-              <button type="button" class="btn btn-primary btn-md">Submit</button>
-            </div>
-          </form>
+          </div>
         </div>
-        <div class="col-lg-6">
-                <div class="">
-                  <h2>Payment Methods</h2>
-                  <img src="./assets/img/visa.png" class="me-2" alt="">
-                  <img src="./assets/img/gcash.png" class="me-2" alt="">
-                  <img src="./assets/img/COD.png" alt="">
-                </div>
-                <div class="mt-4">
-                  <h2>Delivery Services</h2>
-                  <a style="text-decoration: none;" href="">
-                    <img src="./assets/img/grab.svg.png" class="me-2" alt="">
-                  </a>
-                  <a style="text-decoration: none;" href="">
-                    <img src="./assets/img/foodpanda.png" alt="">
-                  </a>
-                </div>
-                <div class="mt-4">
-                  <h2>Follow Our Social Media</h2>
-                    <a style="text-decoration: none;" href="">
-                      <img src="./assets/img/fb.png" class="me-2" alt="">
-                    </a>
-                    <a style="text-decoration: none;" href="">
-                      <img src="./assets/img/insta.png" class="me-2" alt="">
-                    </a>
-                    <a style="text-decoration: none;" href="">
-                      <img src="./assets/img/twt.png" alt="">
-                    </a>
-                </div>
-        </div>
-      </div>
-      <!-- </div> -->
-    </section>
+        <!-- </div> -->
+      </section>
 
       <footer class="bg-dark text-light mt-3 py-2">
         <div class="text-center">
@@ -231,7 +502,10 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="https://kit.fontawesome.com/4e5ad6af68.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4e5ad6af68.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
