@@ -15,53 +15,51 @@
   </head>
   <body>
     <main>
-      <header class="try">
-        <div class="row">
-          <!-- banner -->
-          <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5 col-xxl-5">
-            <a style="text-decoration: none; color: white" href="index.html">
-              <div class="banner-name try">
-                <h1>Albert's Biscuits</h1>
-                <h4>Home of Cookies and Delicacies</h4>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="brand-name text-center d-md-none d-sm-block try">
+            <h3>Albert's Biscuits</h3>
+            <h6>Home of Cookies and Delicacies</h6>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; top: 10px; right: 10px;">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="index.html">
+              <div class="brand-name d-md-block d-none try">
+                <h3>Albert's Biscuits</h3>
+                <h6>Home of Cookies and Delicacies</h6>
               </div>
             </a>
-          </div>
-          <!-- banner -->
-
-          <!-- navbar -->
-          <div class="col-sm-12 col-md-6 col-lg-7 col-xl-7 col-xxl-7">
-            <div class="py-3 nav-center">
-              <nav class="navbar-expand try">
-                <div class="container-fluid">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <div class="search-bar input-group">
-                        <input type="search" class="form-control" />
-                        <span class="input-group-text">
-                          <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#my-cart" data-bs-toggle="offcanvas">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart">Cart</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#account">
-                        <i class="fa-solid fa-user"></i>
-                        <span class="acct">Account</span>
-                      </a>
-                    </li>
-                  </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0 mx-3 float-right try">
+              <li class="nav-item">
+                <div class="search-bar input-group">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                  <input type="search" class="form-control" />
                 </div>
-              </nav>
-            </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./maintenance.html">
+                  <i class="fa-solid fa-cookie"></i>
+                  <span class="product">Product</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#my-cart" data-bs-toggle="offcanvas">
+                  <i class="fa-solid fa-cart-shopping text-white"></i>
+                  <span class="cart">Cart</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#account" data-bs-toggle="modal" data-bs-target="#account">
+                  <i class="fa-solid fa-user"></i>
+                  <span class="acct">Account</span>
+                </a>
+              </li>
+            </ul>
           </div>
-          <!-- navbar -->
-        </div>
-      </header>
+      </nav>
 
       <!-- my cart -->
       <div
@@ -89,37 +87,46 @@
       <!-- my cart -->
 
       <!-- account -->
-      <div class="modal fade" id="#account">
-        <div class="modal-dialog">
+      <div class="modal fade" id="account">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
-      
+
             <!-- Modal Header -->
             <div class="modal-header">
-              <h4 class="modal-title">Modal Heading</h4>
+              <h4 class="modal-title">Sign in to you account</h4>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-      
+
             <!-- Modal body -->
-            <div class="modal-body">
-              Modal body..
+            <div class="modal-body px-3">
+              <form action="/action_page.php">
+                <label for="email">Email<span style="color: red;">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address">
+                <label for="pw">Password<span style="color: red;">*</span></label>
+                <input type="password" id="pw" name="pw" placeholder="Enter your password">
+                <button type="button" class="btn btn-danger w-100 mt-2">SIGN IN</button>
+                <a href="#" class="d-flex justify-content-center">Forgot password?</a>
+              </form>
+
             </div>
-      
+
             <!-- Modal footer -->
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              <span class="w-100 text-center">Don't have an account?</span>
+              <button type="button" class="btn btn-outline-danger w-100">Register</button>
             </div>
-      
+
           </div>
         </div>
       </div>
-      
+
       <!-- account -->
 
       <!-- productlist       -->
       <section class="product-list p-4">
         <div class="row">
           <h2>Most Popular</h2>
-          <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
             <div class="card">
               <a href="ferrero.html" class="text-decoration-none text-dark">
                 <img
@@ -137,7 +144,7 @@
                   </h5>
                   <h6 class="card-title d-block d-sm-none">Ferrero</h6>
                   <button type="button" class="btn btn-outline-danger">
-                    <span class="d-none d-lg-block" style="font-size: 14px"
+                    <span class="btn-size"
                       >Add to Cart</span
                     >
                     <span
@@ -158,7 +165,7 @@
               </a>
             </div>
           </div>
-          <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
             <div class="card">
               <a href="/pepero.html" class="text-decoration-none text-dark">
                 <img
@@ -193,7 +200,7 @@
               </a>
             </div>
           </div>
-          <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
             <div class="card">
               <a href="#" class="text-decoration-none text-dark">
                 <img
@@ -232,9 +239,7 @@
               </a>
             </div>
           </div>
-          <div
-            class="col-xxl-2 col-xl-2 col-lg-3 d-md-block col-md-3 d-sm-none d-none"
-          >
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
             <div class="card">
               <a href="" class="text-decoration-none text-dark">
                 <img
@@ -273,9 +278,7 @@
               </a>
             </div>
           </div>
-          <div
-            class="d-none d-xxl-block col-xxl-2 d-xl-block col-xl-2 d-lg-none"
-          >
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
             <div class="card">
               <a href="" class="text-decoration-none text-dark">
                 <img
@@ -310,9 +313,7 @@
               </a>
             </div>
           </div>
-          <div
-            class="d-none d-xxl-block col-xxl-2 d-xl-block col-xl-2 d-lg-none"
-          >
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
             <div class="card">
               <a href="" class="text-decoration-none text-dark">
                 <img
@@ -323,7 +324,7 @@
                 <div class="card-body">
                   <h3
                     class="card-title d-none d-lg-block"
-                    style="font-size: 22px; margin-top: 10px"
+                    
                   >
                     Brownie Bites
                   </h3>
@@ -416,7 +417,7 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>For Inquiries</h2>
-            <form action="">
+            <form class="container" action="">
               <div class="input-group mt-2">
                 <span class="input-group-text">Name: </span>
                 <input
@@ -458,9 +459,8 @@
             </form>
           </div>
           <div class="col-lg-6">
-            <div class="">
+            <div class="mt-2">
               <h2>Payment Methods</h2>
-              <img src="./assets/img/visa.png" class="me-2" alt="" />
               <img src="./assets/img/gcash.png" class="me-2" alt="" />
               <img src="./assets/img/COD.png" alt="" />
             </div>
@@ -475,14 +475,11 @@
             </div>
             <div class="mt-4">
               <h2>Follow Our Social Media</h2>
-              <a style="text-decoration: none" href="">
+              <a style="text-decoration: none" href="#">
                 <img src="./assets/img/fb.png" class="me-2" alt="" />
               </a>
-              <a style="text-decoration: none" href="">
+              <a style="text-decoration: none" href="#">
                 <img src="./assets/img/insta.png" class="me-2" alt="" />
-              </a>
-              <a style="text-decoration: none" href="">
-                <img src="./assets/img/twt.png" alt="" />
               </a>
             </div>
           </div>
@@ -490,10 +487,10 @@
         <!-- </div> -->
       </section>
 
-      <footer class="bg-dark text-light mt-3 py-2">
+      <footer class="bg-dark text-light py-2">
         <div class="text-center">
           <i class="fa-solid fa-copyright"></i>
-          <span>Albert's Biscuits - all Rights reserved</span>
+          <span>Albert's Biscuits - All Rights Reserved</span>
         </div>
       </footer>
     </main>
