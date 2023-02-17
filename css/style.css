@@ -24,10 +24,21 @@
 main, [class*="offcanvas-body"] {
   background-color: rgba(218, 218, 218, 0.307);
 }
+[class*="nav-link"]:hover {
+  color: yellow;
+}
 
 [class*="card-body"] {
   text-align: center;
 }
+
+[class*="card-title"] {
+  font-size: 20px;
+}
+.btn-size {
+  font-size: 12px;
+}
+
 [class*="shadow"] {
   border-radius: 20px;
 }
@@ -81,7 +92,6 @@ main, [class*="offcanvas-body"] {
     }
     [class*="nav-link"] {
       display: flex;
-      border: 1px solid red;
     }
 
       /* .cart {
