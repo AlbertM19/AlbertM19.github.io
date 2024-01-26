@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Monomaniac+One&family=Roboto+Mono:ital,wght@0,100;0,300;0,600;0,700;1,200&family=Slackside+One&family=Yatra+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+body {
+    font-family: 'Yatra One', cursive;
+}
+
+main {
+    background-image: url(../assets/img/wallpaper2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#welcome-section, #projects, #contact {
+    padding: 80px 30px 0;
+    height: 100vh;
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 80px;
+    background: linear-gradient(0deg, red, #800000);
+    padding: 0 20px;
+    box-shadow: 1px 1px 20px 0px #bfbfbf;
+    z-index: 1; 
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav > ul > li {
+    padding: 10px;
+    font-size: 28px;
+}
+
+li > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#welcome-section {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+#welcome-section > h1 {
+    font-size: 5em;
+    background-image: linear-gradient(140deg, maroon, orangered);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#welcome-section > p {
+    font-size: 2.5em;
+    background-image: linear-gradient(220deg, orangered, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#projects > .container {
+    height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container-items {
+    display: flex;
+    width: calc(420px * 8);
+    animation: container 30s linear infinite;
+}
+
+.container-items:hover {
+    animation-play-state: paused;
+}
+
+.container > .container-items > .project-tile {
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 20px;
+    text-decoration: none;
+    background-color: #3E3C3C;
+    box-shadow: 7px 9px 20px 0px #bfbfbf;
+    transition: transform 0.5s;
+}
+
+@keyframes container {
+    100% {
+        transform: translateX(calc(-420px * 4));
+    }
+}
+
+.project-tile > img {
+    width: 380px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px  10px 0 0;
+    /* border: 1px solid red; */
+}
+
+.project-tile:hover {
+    transform: scale(1.1);
+}
+
+.project-tile > .proj-title {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+#contact > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: calc(100vh - 180px);
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    background: linear-gradient(maroon, orangered);
+    margin: 80px 10px;
+    padding: 0 30px;
+    border-radius: 10px;
+}
+
+aside:first-of-type {
+    justify-content: space-evenly;
+}
+
+aside:first-of-type > div > p {
+    display: flex;
+    align-items: baseline;
+}
+
+p > i {
+    padding-right: 5px;
+}
+
+aside > * {
+    font-size: 1.2em;
+}
+
+aside div:last-of-type {
+    text-align: center;
+}
+
+input, textarea {
+    border: none;
+    border-radius: 3px;
+    color: #323232;
+    display: block;
+    padding: 8px;
+    width: 100%;
+}
+
+aside > div > a {
+    text-decoration: none;
+}
+
+button {
+    background-color: rgb(0, 102, 255);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #contact {
+        height: unset;
+        padding: 80px 40px 40px;
+    }
+
+    #contact > .container {
+        display: revert;
+        height: unset;
+        padding: 5px 20px;
+    }
+    
+    aside {
+        display: revert;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        background: linear-gradient(maroon, orangered);
+        border-radius: 10px;
+        margin: 20px auto;
+        padding: 20px 30px;
+    }
+    
+    aside:first-of-type {
+        justify-content: space-evenly;
+    }
+    
+    aside:first-of-type > div > p {
+        display: flex;
+        align-items: baseline;
+    }
+    
+    p > i {
+        padding-right: 5px;
+    }
+    
+    aside > * {
+        font-size: 1.2em;
+    }
+    
+    aside div:last-of-type {
+        text-align: center;
+    }
+    
+    input, textarea {
+        border: none;
+        border-radius: 3px;
+        color: #323232;
+        display: block;
+        padding: 8px;
+        width: 100%;
+    }
+    
+    aside > div > a {
+        text-decoration: none;
+    }
+    
+    button {
+        background-color: rgb(0, 102, 255);
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+}
+
+footer {
+    bottom: 0;
+    background: linear-gradient(red, orangered);
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}

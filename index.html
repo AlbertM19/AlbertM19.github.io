@@ -4,372 +4,189 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Albert's Biscuits</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <main>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-          <div class="brand-name text-center d-md-none d-sm-block ">
-            <h3>Albert's Biscuits</h3>
-            <h6>Home of Cookies and Delicacies</h6>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; top: 20px; right: 10px;">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="index.html">
-              <div class="brand-name d-md-block d-none ">
-                <h3>Albert's Biscuits</h3>
-                <h6>Home of Cookies and Delicacies</h6>
-              </div>
-            </a>
-            <ul class="navbar-nav mb-2 mb-lg-0 mx-3 float-right ">
-              <li class="nav-item pt-1">
-                  <i class="fa-solid fa-magnifying-glass text-white"></i>
-                  <input class="rounded" type="search" name="search" placeholder="Search product">
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./maintenance.html">
-                  <i class="fa-solid fa-cookie"></i>
-                  <span class="product">Products</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#my-cart" data-bs-toggle="offcanvas">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <span class="cart">Cart</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#account" data-bs-toggle="modal" data-bs-target="#account">
-                  <i class="fa-solid fa-user"></i>
-                  <span class="acct">Account</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-      </nav>
-
-      <!-- my cart -->
-      <div
-        class="offcanvas offcanvas-end"
-        tabindex="-1"
-        id="my-cart"
-        aria-labelledby="offcanvasLabel"
-      >
-        <div class="offcanvas-header border-bottom">
-          <h5 class="offcanvas-title">My Cart</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body d-flex justify-content-center">
-          <div class="align-self-center">
-            <img src="./assets/img/cart-icon.jpg" alt="cart icon" />
-            <p class="mt-4">You have no items in your cart</p>
-          </div>
-        </div>
-      </div>
-      <!-- my cart -->
-
-      <!-- account -->
-      <div class="modal fade" id="account">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h4 class="modal-title">Sign in to you account</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body px-3">
-              <form action="/action_page.php">
-                <label for="email">Email<span style="color: red;">*</span></label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address">
-                <label for="pw">Password<span style="color: red;">*</span></label>
-                <input type="password" id="pw" name="pw" placeholder="Enter your password">
-                <button type="button" class="btn btn-danger w-100 mt-2">SIGN IN</button>
-                <a href="#" class="d-flex justify-content-center">Forgot password?</a>
-              </form>
-
-            </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-              <span class="w-100 text-center">Don't have an account?</span>
-              <button type="button" class="btn btn-outline-danger w-100">Register</button>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <!-- account -->
-
-      <!-- productlist       -->
-      <section class="product-list p-4">
-        <div class="row">
-          <h2>Most Popular</h2>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
-            <div class="card">
-              <a href="ferrero.html" class="text-decoration-none text-dark">
-                <img
-                  class="card-img-top"
-                  src="./assets/img/ferrero.png"
-                  alt=""
-                />
-                <div class="card-body">
-                  <h3 class="card-title">Ferrero</h3>
-                  <button type="button" class="btn btn-outline-danger">
-                    <span class="btn-size">Add to Cart</span>
-                  </button>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
-            <div class="card">
-              <a href="/pepero.html" class="text-decoration-none text-dark">
-                <img
-                  class="card-img-top"
-                  src="./assets/img/pepero-chococookie.jpg"
-                  alt=""
-                />
-                <div class="card-body">
-                  <h3 class="card-title">Pepero</h3>
-                  <button type="button" class="btn btn-outline-danger">
-                    <span class="btn-size">Add to Cart</span>
-                  </button>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
-            <div class="card">
-              <a href="./maltesers.html" class="text-decoration-none text-dark">
-                <img
-                  class="card-img-top"
-                  src="./assets/img/maltesers.jpg"
-                  alt=""
-                />
-                <div class="card-body">
-                  <h3 class="card-title">Maltesers</h3>
-                  <button type="button" class="btn btn-outline-danger">
-                    <span class="btn-size">Add to Cart</span>
-                  </button>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
-            <div class="card">
-              <a href="./pik-nik.html" class="text-decoration-none text-dark">
-                <img
-                  class="card-img-top"
-                  src="./assets/img/piknik.jpg"
-                  alt=""
-                />
-                <div class="card-body">
-                  <h3 class="card-title">Pik-nik</h3>
-                  <button type="button" class="btn btn-outline-danger">
-                    <span class="btn-size">Add to Cart</span>
-                  </button>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
-            <div class="card">
-              <a href="./pocky.html" class="text-decoration-none text-dark">
-                <img
-                  class="card-img-top"
-                  src="./assets/img/pocky-chocobanana.jpg"
-                  alt=""
-                />
-                <div class="card-body">
-                  <h3 class="card-title">Pocky</h3>
-                  <button type="button" class="btn btn-outline-danger">
-                    <span class="btn-size">Add to Cart</span>
-                  </button>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 pt-3">
-            <div class="card">
-              <a href="./brownie-bites.html" class="text-decoration-none text-dark">
-                <img
-                  class="card-img-top"
-                  src="./assets/img/brownie-bitesjpg.jpg"
-                  alt=""
-                />
-                <div class="card-body">
-                  <h3 class="card-title">brownie bites</h3>
-                  <button type="button" class="btn btn-outline-danger">
-                    <span class="btn-size">Add to Cart</span>
-                  </button>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- </div> -->
-      </section>
-
-      <!-- location -->
-      <section class="overflow-hidden py-2">
-        <div class="row">
-          <div class="col-lg-6 text-center pt-2 ">
-            <a class="" href="https://goo.gl/maps/G4xKbtEPxTcRip8Q8">
-              <img
-                class="shadow m-auto d-none d-xxl-block"
-                src="./assets/img/loc_map.png"
-                alt="loc_map"
-              />
-              <img
-                class="shadow m-auto d-none d-xl-block d-xxl-none"
-                src="./assets/img/loc_map-xl.png"
-                alt=""
-              />
-              <img
-                class="shadow m-auto d-none d-lg-block d-xl-none"
-                src="./assets/img/loc_map-lg.png"
-                alt=""
-              />
-              <img
-                class="shadow m-auto d-none d-md-block d-lg-none"
-                src="./assets/img/loc_map-xl.png"
-                alt=""
-              />
-              <img
-                class="shadow m-auto d-md-none d-lg-none d-xl-none d-xxl-none"
-                src="./assets/img/loc_map-sm.png"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-lg-6 d-flex justify-content-center pt-2 ">
-            <div class="align-self-center text-center">
-              <h1 class="d-none d-xl-block">Store Location</h1>
-              <h2 class="d-none d-lg-block d-xl-none">Store Location</h2>
-              <h3 class="d-md-block d-lg-none">Store Location</h3>
-              <a class="text-decoration-none text-dark" href="https://goo.gl/maps/G4xKbtEPxTcRip8Q8">
-                <h4 class="d-none d-xl-block mt-4">
-                  C. Raymundo Ave, Caniogan, Pasig City, 1606 Metro Manila
-                </h4>
-                <h5 class="d-none d-lg-block d-xl-none mt-2">
-                  C. Raymundo Ave, Caniogan, Pasig City, 1606 Metro Manila
-                </h5>
-                <h6 class="d-md-block d-lg-none mt-2">
-                  C. Raymundo Ave, Caniogan, Pasig City, 1606 Metro Manila
-              </h6>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="overflow-hidden bg-white p-4 pt-3 mt-5">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>For Inquiries</h2>
-            <form class="container" action="">
-              <div class="input-group mt-2">
-                <span class="input-group-text">Name: </span>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Full Name"
-                />
-              </div>
-              <div class="input-group mt-2">
-                <span class="input-group-text">Email: </span>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="e.g. Juandelacruz@gmail.com"
-                />
-              </div>
-              <div class="input-group mt-2">
-                <span class="input-group-text">Number:</span>
-                <input
-                  type="tel"
-                  class="form-control"
-                  placeholder="Mobile Number"
-                />
-              </div>
-              <div class="form-floating mt-2">
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  id="msg"
-                  name="msg"
-                ></textarea>
-                <label for="msg">Message</label>
-              </div>
-              <div class="text-center mt-2">
-                <button type="button" class="btn btn-primary btn-md">
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col-lg-6">
-            <div class="mt-2">
-              <h2>Payment Methods</h2>
-              <img src="./assets/img/gcash.png" class="me-2" alt="" />
-              <img src="./assets/img/COD.png" alt="" />
-            </div>
-            <div class="mt-4">
-              <h2>Delivery Services</h2>
-              <a style="text-decoration: none" href="">
-                <img src="./assets/img/grab.svg.png" class="me-2" alt="" />
-              </a>
-              <a style="text-decoration: none" href="">
-                <img src="./assets/img/foodpanda.png" alt="" />
-              </a>
-            </div>
-            <div class="mt-4">
-              <h2>Follow Our Social Media</h2>
-              <a style="text-decoration: none" href="https://web.facebook.com/">
-                <img src="./assets/img/fb.png" class="me-2" alt="" />
-              </a>
-              <a style="text-decoration: none" href="https://www.instagram.com/">
-                <img src="./assets/img/insta.png" class="me-2" alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- </div> -->
-      </section>
-
-      <footer class="bg-dark text-light py-2">
-        <div class="text-center">
-          <i class="fa-solid fa-copyright"></i>
-          <span>Albert's Biscuits - All Rights Reserved</span>
-        </div>
-      </footer>
-    </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://kit.fontawesome.com/4e5ad6af68.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Portfolio - Albert Mallillin</title>
+  </head>
+  <body>
+    <main>
+      <header id="navbar">
+        <nav>
+          <ul>
+            <li><a href="#welcome-section">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="welcome-section">
+        <h1>Hello, I'm Albert</h1>
+        <p>Aspiring FullStack Web Developer</p>
+      </section>
+
+      <section id="projects">
+        <h2>MY PROJECTS</h2>
+        <div class="container">
+          <div class="container-items">
+            <a
+              href="./projects/tictactoe/tictactoe.html"
+              target="_blank"
+              class="project-tile"
+            >
+              <img src="./projects/tic-tac-toe/tictactoe.png" alt="photo" />
+              <p class="proj-title">
+                <span class="code">&lt;</span>
+                Tic Tac Toe
+                <span class="code">/&gt;</span>
+              </p>
+            </a>
+            <a
+              href="./projects/penguin/index.html"
+              target="_blank"
+              class="project-tile"
+            >
+              <img src="./projects/penguin/penguin.png" alt="photo" />
+              <p class="proj-title">
+                <span class="code">&lt;</span>
+                Penguin
+                <span class="code">/&gt;</span>
+              </p>
+            </a>
+            <a
+              href="./projects/jaknpoy/jaknpoy.html"
+              target="_blank"
+              class="project-tile"
+            >
+              <img src="./assets/img/wallpaper3.jpg" alt="photo" />
+              <p class="proj-title">
+                <span class="code">&lt;</span>
+                Jak 'N Poy
+                <span class="code">/&gt;</span>
+              </p>
+            </a>
+            <a target="_blank" class="project-tile">
+              <img src="./assets/img/wallpaper5.jpg" alt="photo" />
+              <p class="proj-title">
+                <span class="code">&lt;</span>
+                Product Landing Page
+                <span class="code">/&gt;</span>
+              </p>
+            </a>
+            <a
+              href="./projects/tic-tac-toe/tic-tac-toe.html"
+              target="_blank"
+              class="project-tile"
+            >
+              <img src="./projects/tic-tac-toe/tictactoe.png" alt="photo" />
+              <p class="proj-title">
+                <span class="code">&lt;</span>
+                Tic Tac Toe
+                <span class="code">/&gt;</span>
+              </p>
+            </a>
+            <a
+              href="./projects/penguin/index.html"
+              target="_blank"
+              class="project-tile"
+            >
+              <img src="./projects/penguin/penguin.png" alt="photo" />
+              <p class="proj-title">
+                <span class="code">&lt;</span>
+                Penguin
+                <span class="code">/&gt;</span>
+              </p>
+            </a>
+            <a target="_blank" class="project-tile">
+              <img src="./assets/img/wallpaper3.jpg" alt="photo" />
+              <p class="proj-title">
+                <span class="code">&lt;</span>
+                Documentation Page
+                <span class="code">/&gt;</span>
+              </p>
+            </a>
+            <a target="_blank" class="project-tile">
+              <img src="./assets/img/wallpaper5.jpg" alt="photo" />
+              <p class="proj-title">
+                <span class="code">&lt;</span>
+                Product Landing Page
+                <span class="code">/&gt;</span>
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="container">
+          <aside>
+            <div>
+              <h5>Email</h5>
+              <p>
+                <i class="fa-solid fa-envelope fa-sm"></i>
+                albert.mallillin19@gmail.com
+              </p>
+            </div>
+            <div>
+              <h5>Contact No.</h5>
+              <p>
+                <i class="fas fa-mobile-alt fa-sm"></i>
+                09103753230
+              </p>
+            </div>
+            <div>
+              <h5>Social Media</h5>
+              <a id="profile-link" target="_blank" href=""
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href=""><i class="fab fa-github"></i></a>
+              <a href=""><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div>
+              <a href="./html_tags_all.txt" download>
+                <button>Download CV</button>
+              </a>
+            </div>
+          </aside>
+
+          <aside>
+            <form action="form.txt">
+              <label for="name">Enter Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+              />
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+              />
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <div>
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+          </aside>
+        </div>
+      </section>
+      <footer>
+        <p>Copyright 2023 - Albert Mallillin</p>
+      </footer>
+    </main>
   </body>
 </html>
